@@ -1,4 +1,4 @@
-🛒 E-Commerce Sales EDA Project
+🛒 zepto Sales EDA Project
 📌 Overview
 
 This project performs Exploratory Data Analysis (EDA) on an e-commerce dataset to uncover insights related to pricing, discounts, revenue, and inventory management.

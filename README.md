@@ -1,134 +1,73 @@
-📊 Zepto Retail Data Analysis (EDA)
+🛒 Zepto EDA (Exploratory Data Analysis)
+📌 Project Overview
 
-A comprehensive Exploratory Data Analysis (EDA) project on Zepto product data to uncover insights related to revenue, pricing strategy, discounts, and inventory optimization.
+This project focuses on performing Exploratory Data Analysis (EDA) on a Zepto e-commerce dataset to uncover meaningful business insights related to pricing, discounts, inventory, and revenue.
 
-🚀 Project Overview
+The goal is to transform raw data into actionable insights that can help improve business decision-making, inventory planning, and pricing strategies.
 
-This project analyzes product-level data from a quick-commerce platform (Zepto) to extract meaningful business insights.
-
-The analysis focuses on:
-
-📈 Revenue generation patterns
-💰 Profit estimation across products
-🏷️ Discount effectiveness
-📦 Inventory and dead stock detection
-🧠 Product segmentation (High vs Low value)
 🎯 Objectives
-Understand pricing and discount strategies
-Identify top-performing and underperforming products
-Detect inventory inefficiencies
-Provide actionable business insights
-📂 Dataset Description
-Column	Description
-Category	Product category
-name	Product name
-mrp	Maximum Retail Price
-discountedSellingPrice	Final selling price
-discountPercent	Discount applied
-availableQuantity	Available inventory
-quantity	Units sold
-outOfStock	Stock status
-weightInGms	Product weight
-🛠️ Tech Stack
-Python 🐍
-Pandas – Data manipulation
-NumPy – Numerical operations
-Matplotlib & Seaborn – Visualization
-⚙️ Feature Engineering
-df["revenue"] = df["discountedSellingPrice"] * df["quantity"]
-df["profit_estimate"] = df["mrp"] - df["discountedSellingPrice"]
-📊 Analysis Performed
-🔹 1. Revenue Analysis
-Category-wise revenue contribution
-Product-level revenue comparison
-df.groupby("Category")["revenue"].sum()
-🔹 2. Profit Analysis
-Estimated profit across categories
-df.groupby("Category")["profit_estimate"].sum()
-🔹 3. Discount Analysis
-Products with highest discounts
-df.sort_values(by="discountPercent", ascending=False)
-🔹 4. Inventory Risk (Dead Stock)
-dead_stock = df[(df["quantity"] == 0) & (df["availableQuantity"] > 0)]
+Analyze product pricing and discount patterns
+Identify high-performing and underperforming products
+Understand category-wise revenue contribution
+Detect inventory risks such as out-of-stock or dead stock items
+Estimate profit and revenue trends
+📊 Key Analysis Performed
+Category-wise Revenue Analysis
+Understanding which categories generate the most revenue
+Product-Level Revenue Insights
+Identifying top-performing products
+Discount Analysis
+Finding products with the highest discounts
+Profit Estimation
+Calculating estimated profit using MRP and selling price
+Inventory Analysis
+Detecting:
+Out-of-stock products
+Dead stock items
+High-demand products
+Customer Value Segmentation
+Categorizing products into high-value and low-value segments
+💡 Key Insights
+Some products offer very high discounts, indicating aggressive pricing strategies
+Certain categories contribute significantly more revenue than others
+High MRP + Out-of-stock products highlight missed revenue opportunities
+Profit margins vary widely across categories
+Inventory inefficiencies exist in the form of dead stock and low turnover products
+🧰 Tools & Technologies
+Python
+Pandas
+Matplotlib / Seaborn
+Jupyter Notebook
+📁 Dataset Features
 
-👉 Helps identify products with zero sales but available inventory
+The dataset includes:
 
-🔹 5. Product Segmentation
-def segment(row):
-    if row["revenue"] > df["revenue"].median():
-        return "High Value"
-    else:
-        return "Low Value"
+Product Category
+Product Name
+MRP (Maximum Retail Price)
+Discount Percentage
+Selling Price
+Available Quantity
+Product Weight
+Stock Status
+🚀 Business Use Cases
+Pricing Optimization
+Inventory Management
+Demand Forecasting
+Profit Maximization
+Marketing Strategy Planning
+📈 Future Improvements
+Add interactive dashboards (Power BI / Tableau)
+Build predictive models for demand forecasting
+Perform customer segmentation analysis
+Integrate real-time data pipeline (Airflow + AWS)
+🤝 Contributing
 
-df["segment"] = df.apply(segment, axis=1)
-📈 Key Visualizations
-📊 Revenue by Category
-📊 Revenue by Product
-📊 Profit by Category
-📊 Discount Distribution
-📊 Dead Stock Analysis
-🔍 Key Insights
-💰 Revenue Insights
-A small number of products contribute to the majority of revenue
-Certain categories dominate sales performance
-📉 Discount Insights
-Higher discounts do not always increase sales
-Some products with low discounts perform better
-📦 Inventory Insights
-Presence of dead stock indicates inefficient inventory planning
-Overstocking leads to capital being blocked
-📊 Profit Insights
-High revenue ≠ high profit
-Lower discounts often result in better margins
-🧠 Strategic Recommendations
-Optimize discount strategies
-Focus on high-performing products
-Reduce dead stock with demand-based inventory
-Improve pricing for better profit margins
-📂 Project Structure
-zepto_EDA/
-│── data/
-│   └── dataset.csv
-│── notebooks/
-│   └── eda.ipynb
-│── src/
-│   └── analysis.py
-│── outputs/
-│   └── charts/
-│── README.md
-│── requirements.txt
-📦 Installation
-git clone https://github.com/ankitkashyap2400/zepto_EDA.git
-cd zepto_EDA
-pip install -r requirements.txt
-▶️ Usage
-python analysis.py
-🧪 Future Improvements
-📊 Build dashboard using Streamlit / Power BI
-🤖 Add demand forecasting model
-⚙️ Automate pipeline using Airflow
-☁️ Integrate with AWS S3
-💼 Interview Questions You Can Answer
-How do you identify dead stock?
-Does discount increase sales?
-How do you calculate revenue and profit?
-What business insights can be derived from EDA?
-How would you improve inventory management?
-👤 Author
+Contributions are welcome! Feel free to fork the repo and improve the analysis.
 
-Ankit Kashyap
-🔗 GitHub: https://github.com/ankitkashyap2400
+📬 Contact
 
-⭐ Support
+For any queries or collaboration:
 
-If you found this project helpful, give it a ⭐ on GitHub!
+GitHub: https://github.com/ankitkashyap2400
 
-🔥 If you want next upgrade:
-
-I can turn this into:
-
-Resume bullet points (🔥 very important for fresher jobs)
-Portfolio explanation (for interviews)
-End-to-end Data Engineering project (Airflow + AWS)
-
-Just tell me 👍

@@ -28,27 +28,7 @@ weightInGms	Product weight
 📊 Pandas
 📉 Matplotlib / Seaborn
 📓 Jupyter Notebook
-📊 Key Analysis Performed
-1️⃣ Revenue Analysis
-Calculated revenue:
-df["revenue"] = df["discountedSellingPrice"] * df["quantity"]
-Identified top-performing categories and products
-2️⃣ Profit Estimation
-df["profit_estimate"] = df["mrp"] - df["discountedSellingPrice"]
-Found categories with highest profit margins
-3️⃣ Discount Analysis
-Products with highest discounts
-Impact of discount on sales
-4️⃣ Inventory Risk Analysis
-Identified dead stock
-dead_stock = df[(df["quantity"] == 0) & (df["availableQuantity"] > 0)]
-5️⃣ Customer Value Segmentation
-def segment(row):
-    if row["revenue"] > df["revenue"].median():
-        return "High Value"
-    else:
-        return "Low Value"
-📈 Key Insights
+ insigths 
 📌 High discounts do not always lead to higher sales
 📌 Some products generate high revenue with low discounts
 📌 Presence of dead stock indicates poor inventory planning
@@ -62,7 +42,6 @@ Profit Analysis
 Inventory Risk Charts
 🚀 How to Run
 Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
 Install dependencies
 pip install pandas matplotlib seaborn
 Run the notebook

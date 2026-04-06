@@ -1,5 +1,5 @@
 🛒 Zepto EDA (Exploratory Data Analysis)
-📌 Project Overview
+ Project Overview
 
 This project focuses on performing Exploratory Data Analysis (EDA) on a Zepto e-commerce dataset to uncover meaningful business insights related to pricing, discounts, inventory, and revenue.
 

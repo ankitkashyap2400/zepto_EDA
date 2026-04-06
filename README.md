@@ -1,42 +1,43 @@
 🛒 Zepto EDA (Exploratory Data Analysis)
- Project Overview
+📌 Project Overview
 
-This project focuses on performing Exploratory Data Analysis (EDA) on a Zepto e-commerce dataset to uncover meaningful business insights related to pricing, discounts, inventory, and revenue.
+This project performs Exploratory Data Analysis (EDA) on a Zepto e-commerce dataset to extract meaningful insights related to pricing, discounts, inventory, and revenue.
 
-The goal is to transform raw data into actionable insights that can help improve business decision-making, inventory planning, and pricing strategies.
+The objective is to convert raw data into actionable business insights for better decision-making, inventory optimization, and pricing strategies.
 
 🎯 Objectives
 Analyze product pricing and discount patterns
 Identify high-performing and underperforming products
-Understand category-wise revenue contribution
-Detect inventory risks such as out-of-stock or dead stock items
+Evaluate category-wise revenue contribution
+Detect inventory risks (out-of-stock & dead stock)
 Estimate profit and revenue trends
 📊 Key Analysis Performed
-Category-wise Revenue Analysis
-Understanding which categories generate the most revenue
-Product-Level Revenue Insights
-Identifying top-performing products
-Discount Analysis
-Finding products with the highest discounts
-Profit Estimation
-Calculating estimated profit using MRP and selling price
-Inventory Analysis
-Detecting:
-Out-of-stock products
-Dead stock items
-High-demand products
-Customer Value Segmentation
-Categorizing products into high-value and low-value segments
+🔹 Revenue Analysis
+Category-wise revenue contribution
+Product-level performance evaluation
+🔹 Discount Analysis
+Identification of highly discounted products
+Understanding discount impact on sales
+🔹 Profit Estimation
+Estimated profit using MRP and selling price
+Profit comparison across categories
+🔹 Inventory Analysis
+Detection of out-of-stock products
+Identification of dead stock
+Analysis of high-demand products
+🔹 Segmentation
+Classification into high-value and low-value products
 💡 Key Insights
-Some products offer very high discounts, indicating aggressive pricing strategies
-Certain categories contribute significantly more revenue than others
-High MRP + Out-of-stock products highlight missed revenue opportunities
-Profit margins vary widely across categories
-Inventory inefficiencies exist in the form of dead stock and low turnover products
+High discounts indicate aggressive pricing strategies
+A few categories contribute to the majority of revenue
+High-value products going out of stock lead to lost revenue opportunities
+Profit margins vary significantly across products and categories
+Dead stock highlights inventory inefficiencies
 🧰 Tools & Technologies
 Python
 Pandas
-Matplotlib / Seaborn
+Matplotlib
+Seaborn
 Jupyter Notebook
 📁 Dataset Features
 
@@ -54,20 +55,3 @@ Stock Status
 Pricing Optimization
 Inventory Management
 Demand Forecasting
-Profit Maximization
-Marketing Strategy Planning
-📈 Future Improvements
-Add interactive dashboards (Power BI / Tableau)
-Build predictive models for demand forecasting
-Perform customer segmentation analysis
-Integrate real-time data pipeline (Airflow + AWS)
-🤝 Contributing
-
-Contributions are welcome! Feel free to fork the repo and improve the analysis.
-
-📬 Contact
-
-For any queries or collaboration:
-
-GitHub: https://github.com/ankitkashyap2400
-
